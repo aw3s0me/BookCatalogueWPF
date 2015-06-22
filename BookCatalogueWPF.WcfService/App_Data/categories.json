@@ -1,26 +1,25 @@
-﻿{
-    "categories": [ 
+﻿[ 
         {
             "id": "1",
             "name": "Техническая литература",
-            "childNodes": [
+            "children": [
                 {
                     "id": "4",
                     "name": "Информационные технологии",
-                    "childNodes": [
+                    "children": [
                         {
                             "id": "5",
                             "name": "Технологии разработки",
-                            "childNodes": [
+                            "children": [
                                 {
                                     "id": "6",
                                     "name": ".NET",
-                                    "childNodes": [ ]
+                                    "children": [ ]
                                 },
                                 { 
                                     "id": "7",
                                     "name": "JAVA",
-                                    "childNodes": []
+                                    "children": []
                                 }
                             ]
                         }
@@ -31,12 +30,12 @@
         {
             "id": "2",
             "name": "Художественная литература",
-            "childNodes": [ ]
+            "children": [ ]
         },
         {
             "id": "3",
             "name": "Журналы и статьи",
-            "childNodes": [ ]
+            "children": [ ]
         }
     ]
-}
+

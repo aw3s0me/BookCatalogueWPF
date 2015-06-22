@@ -50,8 +50,40 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Entities\BookTest.cs" />
+    <Compile Include="Entities\CategoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BookServiceTest.cs" />
+    <Compile Include="Services\CategoryServiceTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookCatalogueWPF.BusinessLayer\BookCatalogueWPF.BusinessLayer.csproj">
+      <Project>{9442c4fb-4b15-414b-bd69-d717920f4b98}</Project>
+      <Name>BookCatalogueWPF.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookCatalogueWPF.Common\BookCatalogueWPF.Common.csproj">
+      <Project>{f2b55cf2-370f-4e73-a06e-ae42888386be}</Project>
+      <Name>BookCatalogueWPF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookCatalogueWPF.DataAccessLayer\BookCatalogueWPF.DataAccessLayer.csproj">
+      <Project>{7d6d7923-734b-468a-80cc-aa0fa158b50d}</Project>
+      <Name>BookCatalogueWPF.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookCatalogueWPF.Domain\BookCatalogueWPF.Domain.csproj">
+      <Project>{6f8a88c7-b8f6-466d-84f1-51b9be06b77b}</Project>
+      <Name>BookCatalogueWPF.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookCatalogueWPF.WcfService\BookCatalogueWPF.WcfService.csproj">
+      <Project>{81559eb1-af39-4089-b6d9-2275bdf399c1}</Project>
+      <Name>BookCatalogueWPF.WcfService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookCatalogueWPF\BookCatalogueWPF.Client.csproj">
+      <Project>{6d601a09-165a-4880-8ffc-839b02ef8a28}</Project>
+      <Name>BookCatalogueWPF.Client</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WCF\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

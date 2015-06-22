@@ -39,8 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BaseServices\CrudService.cs" />
+    <Compile Include="Services\BaseServices\GenericService.cs" />
+    <Compile Include="Services\BaseServices\ServiceBase.cs" />
+    <Compile Include="Services\PartialServices\BookService.cs" />
+    <Compile Include="Services\PartialServices\CategoryService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookCatalogueWPF.Common\BookCatalogueWPF.Common.csproj">
+      <Project>{f2b55cf2-370f-4e73-a06e-ae42888386be}</Project>
+      <Name>BookCatalogueWPF.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

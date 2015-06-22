@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogueWPF.Client", "BookCatalogueWPF\BookCatalogueWPF.Client.csproj", "{6D601A09-165A-4880-8FFC-839B02EF8A28}"
 EndProject
@@ -20,6 +20,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogueWPF.Domain", "BookCatalogueWPF.Domain\BookCatalogueWPF.Domain.csproj", "{6F8A88C7-B8F6-466D-84F1-51B9BE06B77B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogueWPF.WcfService", "BookCatalogueWPF.WcfService\BookCatalogueWPF.WcfService.csproj", "{81559EB1-AF39-4089-B6D9-2275BDF399C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{A5CEAE40-642B-4D73-8213-E280A1FC403F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogueWPF.Common", "BookCatalogueWPF.Common\BookCatalogueWPF.Common.csproj", "{F2B55CF2-370F-4E73-A06E-AE42888386BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,10 @@ Global
 		{81559EB1-AF39-4089-B6D9-2275BDF399C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81559EB1-AF39-4089-B6D9-2275BDF399C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81559EB1-AF39-4089-B6D9-2275BDF399C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B55CF2-370F-4E73-A06E-AE42888386BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B55CF2-370F-4E73-A06E-AE42888386BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B55CF2-370F-4E73-A06E-AE42888386BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B55CF2-370F-4E73-A06E-AE42888386BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +70,6 @@ Global
 		{DF59CE7C-A540-438E-BCAA-0C5C460E6624} = {FB5EF5E1-CB12-4570-BBBE-25D96C6186E8}
 		{6F8A88C7-B8F6-466D-84F1-51B9BE06B77B} = {014A3744-B884-43E3-9858-72C31659C086}
 		{81559EB1-AF39-4089-B6D9-2275BDF399C1} = {014A3744-B884-43E3-9858-72C31659C086}
+		{F2B55CF2-370F-4E73-A06E-AE42888386BE} = {A5CEAE40-642B-4D73-8213-E280A1FC403F}
 	EndGlobalSection
 EndGlobal
