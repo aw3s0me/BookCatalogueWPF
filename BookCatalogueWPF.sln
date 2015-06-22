@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogueWPF.Client", "BookCatalogueWPF\BookCatalogueWPF.Client.csproj", "{6D601A09-165A-4880-8FFC-839B02EF8A28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{47925E87-113F-4885-B6D1-19B86BE3564E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{014A3744-B884-43E3-9858-72C31659C086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogueWPF.DataAccessLayer", "BookCatalogueWPF.DataAccessLayer\BookCatalogueWPF.DataAccessLayer.csproj", "{7D6D7923-734B-468A-80CC-AA0FA158B50D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogueWPF.BusinessLayer", "BookCatalogueWPF.BusinessLayer\BookCatalogueWPF.BusinessLayer.csproj", "{9442C4FB-4B15-414B-BD69-D717920F4B98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FB5EF5E1-CB12-4570-BBBE-25D96C6186E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogueWPF.UnitTests", "BookCatalogue.UnitTests\BookCatalogueWPF.UnitTests.csproj", "{DF59CE7C-A540-438E-BCAA-0C5C460E6624}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogueWPF.Domain", "BookCatalogueWPF.Domain\BookCatalogueWPF.Domain.csproj", "{6F8A88C7-B8F6-466D-84F1-51B9BE06B77B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalogueWPF.WcfService", "BookCatalogueWPF.WcfService\BookCatalogueWPF.WcfService.csproj", "{81559EB1-AF39-4089-B6D9-2275BDF399C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D601A09-165A-4880-8FFC-839B02EF8A28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D601A09-165A-4880-8FFC-839B02EF8A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D601A09-165A-4880-8FFC-839B02EF8A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D601A09-165A-4880-8FFC-839B02EF8A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D6D7923-734B-468A-80CC-AA0FA158B50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D6D7923-734B-468A-80CC-AA0FA158B50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D6D7923-734B-468A-80CC-AA0FA158B50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D6D7923-734B-468A-80CC-AA0FA158B50D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9442C4FB-4B15-414B-BD69-D717920F4B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9442C4FB-4B15-414B-BD69-D717920F4B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9442C4FB-4B15-414B-BD69-D717920F4B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9442C4FB-4B15-414B-BD69-D717920F4B98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF59CE7C-A540-438E-BCAA-0C5C460E6624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF59CE7C-A540-438E-BCAA-0C5C460E6624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF59CE7C-A540-438E-BCAA-0C5C460E6624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF59CE7C-A540-438E-BCAA-0C5C460E6624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F8A88C7-B8F6-466D-84F1-51B9BE06B77B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F8A88C7-B8F6-466D-84F1-51B9BE06B77B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F8A88C7-B8F6-466D-84F1-51B9BE06B77B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F8A88C7-B8F6-466D-84F1-51B9BE06B77B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81559EB1-AF39-4089-B6D9-2275BDF399C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81559EB1-AF39-4089-B6D9-2275BDF399C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81559EB1-AF39-4089-B6D9-2275BDF399C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81559EB1-AF39-4089-B6D9-2275BDF399C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6D601A09-165A-4880-8FFC-839B02EF8A28} = {47925E87-113F-4885-B6D1-19B86BE3564E}
+		{7D6D7923-734B-468A-80CC-AA0FA158B50D} = {014A3744-B884-43E3-9858-72C31659C086}
+		{9442C4FB-4B15-414B-BD69-D717920F4B98} = {014A3744-B884-43E3-9858-72C31659C086}
+		{DF59CE7C-A540-438E-BCAA-0C5C460E6624} = {FB5EF5E1-CB12-4570-BBBE-25D96C6186E8}
+		{6F8A88C7-B8F6-466D-84F1-51B9BE06B77B} = {014A3744-B884-43E3-9858-72C31659C086}
+		{81559EB1-AF39-4089-B6D9-2275BDF399C1} = {014A3744-B884-43E3-9858-72C31659C086}
+	EndGlobalSection
+EndGlobal

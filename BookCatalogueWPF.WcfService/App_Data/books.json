@@ -1,0 +1,10 @@
+﻿{
+    "books": [
+        {"id":  "1", "category": "4", "year": 2009, "publisher": "edinenie1", "title": "Breakfast for Dinner", "author": "Amanda Camp", "annotation":  "123456"},
+        { "id": "2", "category": "5", "year": 2010, "publisher": "edinenie2", "title": "21 Burgers for the 21st Century", "author": "Stuart Reges", "annotation": "123456" },
+        { "id": "3", "category": "6", "year": 2009, "publisher": "edinenie3", "title": "Lucene in Action, Second Edition", "author": "Amanda Camp", "annotation": "123456" },
+        { "id": "4", "category": "7", "year": 2009, "publisher": "edinenie4", "title": "The Sea of Monsters", "author": "Rick Riordan 3", "annotation": "123456" },
+        { "id": "5", "category": "4", "year": 2009, "publisher": "edinenie5", "title": "Breakfast for Dinner 2", "author": "Rick Riordan", "annotation": "123456" },
+        { "id": "6", "category": "5", "year": 2009, "publisher": "edinenie6", "title": "The Lightning Thief", "author": "Rick Riordan 2", "annotation": "123456" }
+    ]
+}
