@@ -1,12 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BookCatalogueWPF.Domain.UnitOfWork;
 
 namespace BookCatalogueWPF.DataAccessLayer.JSON
 {
-    public class UnitOfWorkFactoryJson
+    public class UnitOfWorkFactoryJson : IUnitOfWorkFactory
     {
+        public IUnitOfWork CreateUnitOfWork()
+        {
+            return new UnitOfWorkJson();
+
+            //switch (type.Name)
+            //{
+            //    case "Book":
+            //        return new UnitOfWorkJson(FilePaths.BookFilePath);
+            //    case "Category":
+            //        return new UnitOfWorkJson(FilePaths.CategoryFilePath);
+            //    default:
+            //        return null;
+            //}
+        }
     }
 }

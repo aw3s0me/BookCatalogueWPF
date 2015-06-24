@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,16 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\DtoBase\DtoBase.cs" />
+    <Compile Include="Dto\DtoBase\DtoEntityBase.cs" />
+    <Compile Include="Dto\DtoBase\DtoList.cs" />
+    <Compile Include="Dto\DtoBase\DtoWrapper.cs" />
+    <Compile Include="Dto\DtoBase\IDtoResponseEnvelope.cs" />
+    <Compile Include="Dto\EntityDto\BookDto.cs" />
+    <Compile Include="Dto\EntityDto\CategoryDto.cs" />
+    <Compile Include="Message\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceContracts\BaseServiceContracts\ICrudService.cs" />
     <Compile Include="ServiceContracts\BaseServiceContracts\IGenericService.cs" />
+    <Compile Include="ServiceContracts\BaseServiceContracts\ITreeService.cs" />
     <Compile Include="ServiceContracts\PartialServiceContracts\IBookService.cs" />
     <Compile Include="ServiceContracts\PartialServiceContracts\ICategoryService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dto\DtoBase\" />
-    <Folder Include="Dto\EntityDto\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -9,7 +9,7 @@ namespace BookCatalogueWPF.Domain.Repository
     public abstract class RepositoryLocatorBase : IRepositoryLocator
     {
         protected Dictionary<Type, object> RepositoryMap = new Dictionary<Type, object>();
-        protected abstract IRepository<TEntity> CreateRepository<TEntity>() where TEntity : class; 
+        protected abstract IRepository<TEntity> CreateRepository<TEntity>(Type type) where TEntity : class; 
 
         public IRepository<TEntity> GetRepository<TEntity>() where TEntity : class
         {
@@ -18,7 +18,7 @@ namespace BookCatalogueWPF.Domain.Repository
             if (RepositoryMap.Keys.Contains(type))
                 return RepositoryMap[type] as IRepository<TEntity>;
 
-            IRepository<TEntity> repository = CreateRepository<TEntity>();
+            IRepository<TEntity> repository = CreateRepository<TEntity>(type);
 
             RepositoryMap.Add(type, repository);
 

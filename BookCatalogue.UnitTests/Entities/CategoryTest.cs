@@ -11,8 +11,8 @@ namespace BookCatalogue.UnitTests.Entities
     {
         private Category _categoryInstance;
         private IList<Category> _categoryListInstance;
-        private const string STORAGE_PATH = "C:\\work\\BookCatalogueWPF\\BookCatalogueWPF.WcfService\\App_Data\\categories.json";
-        private readonly IRepositoryLocator _repositoryLocator = new RepositoryLocatorJson(STORAGE_PATH);
+        //private static string _storagePath = BookCatalogueWPF.DataAccessLayer.FilePaths.CategoryFilePath;
+        private readonly IRepositoryLocator _repositoryLocator = new RepositoryLocatorJson();
             
         [TestMethod]
         public void CategoryCrud()

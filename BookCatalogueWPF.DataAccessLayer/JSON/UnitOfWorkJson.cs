@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BookCatalogueWPF.Domain.UnitOfWork;
 
 namespace BookCatalogueWPF.DataAccessLayer.JSON
 {
-    public class UnitOfWorkJson
+    public class UnitOfWorkJson: UnitOfWorkBase
     {
+        public UnitOfWorkJson()
+        {
+            Locator = new RepositoryLocatorJson();
+        }
     }
 }

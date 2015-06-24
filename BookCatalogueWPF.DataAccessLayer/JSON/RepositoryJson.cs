@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 using BookCatalogueWPF.Domain.Repository;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace BookCatalogueWPF.DataAccessLayer.JSON
 {

@@ -11,8 +11,8 @@ namespace BookCatalogue.UnitTests.Entities
     {
         private Book _bookInstance;
         private IList<Book> _bookListInstance;
-        private const string STORAGE_PATH = "C:\\work\\BookCatalogueWPF\\BookCatalogueWPF.WcfService\\App_Data\\books.json";
-        private readonly IRepositoryLocator _repositoryLocator = new RepositoryLocatorJson(STORAGE_PATH);
+        //private static readonly string _storagePath = BookCatalogueWPF.DataAccessLayer.FilePaths.BookFilePath;
+        private readonly IRepositoryLocator _repositoryLocator = new RepositoryLocatorJson();
 
         [TestMethod]
         public void BookCrud()

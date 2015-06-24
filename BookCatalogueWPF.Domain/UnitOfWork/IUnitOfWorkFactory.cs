@@ -1,4 +1,6 @@
-﻿namespace BookCatalogueWPF.Domain.UnitOfWork
+﻿using System;
+
+namespace BookCatalogueWPF.Domain.UnitOfWork
 {
     public interface IUnitOfWorkFactory
     {
