@@ -6,11 +6,11 @@ namespace BookCatalogueWPF.Common.ServiceContracts.BaseServiceContracts
     [ServiceContract]
     public interface IGenericService<T> : ICrudService<T>, ITreeService<T> where T : DtoEntityBase
     {
-        [OperationContract(Name = "GetAllGeneric")]
-        DtoList<T> GetAll();
+        //[OperationContract]
+        //DtoList<T> GetAll();
 
-        [OperationContract(Name = "GetByIdGeneric")]
-        T GetById(string id);
+        //[OperationContract]
+        //T GetById(string id);
 
     }
 }

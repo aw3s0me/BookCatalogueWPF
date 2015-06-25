@@ -5,7 +5,7 @@
     /// Format:
     /// { "id": "1", "category": "4", "year": 2009, "publisher": "edinenie1", "title": "Breakfast for Dinner", "author": "Amanda Camp", "annotation":  "123456"},
     /// </summary>
-    public sealed class Book
+    public class Book
     {
         public string Id { get; set; }
         public string CategoryId { get; set; }

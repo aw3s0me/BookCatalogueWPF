@@ -39,7 +39,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ServiceModel.Activation" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -70,12 +79,27 @@
     <Compile Include="CategoryWcfService.svc.cs">
       <DependentUpon>CategoryWcfService.svc</DependentUpon>
     </Compile>
+    <Compile Include="Factory\ServiceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BookCatalogueWPF.BusinessLayer\BookCatalogueWPF.BusinessLayer.csproj">
+      <Project>{9442c4fb-4b15-414b-bd69-d717920f4b98}</Project>
+      <Name>BookCatalogueWPF.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookCatalogueWPF.Common\BookCatalogueWPF.Common.csproj">
+      <Project>{f2b55cf2-370f-4e73-a06e-ae42888386be}</Project>
+      <Name>BookCatalogueWPF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookCatalogueWPF.Domain\BookCatalogueWPF.Domain.csproj">
+      <Project>{6F8A88C7-B8F6-466D-84F1-51B9BE06B77B}</Project>
+      <Name>BookCatalogueWPF.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\books.json" />
     <Content Include="App_Data\categories.json" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -108,6 +132,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

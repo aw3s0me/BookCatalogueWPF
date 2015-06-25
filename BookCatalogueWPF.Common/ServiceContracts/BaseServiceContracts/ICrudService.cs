@@ -3,6 +3,7 @@ using BookCatalogueWPF.Common.Dto.DtoBase;
 
 namespace BookCatalogueWPF.Common.ServiceContracts.BaseServiceContracts
 {
+    [ServiceContract]
     public interface ICrudService<T> where T : DtoEntityBase
     {
         [OperationContract]

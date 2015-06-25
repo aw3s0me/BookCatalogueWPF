@@ -8,6 +8,7 @@ using BookCatalogueWPF.Common.Dto.DtoBase;
 
 namespace BookCatalogueWPF.Common.ServiceContracts.BaseServiceContracts
 {
+    [ServiceContract]
     public interface ITreeService<T> where T : DtoEntityBase
     {
         [OperationContract]

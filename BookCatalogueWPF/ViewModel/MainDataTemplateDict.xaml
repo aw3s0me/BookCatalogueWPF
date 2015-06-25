@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:bookv="clr-namespace:BookCatalogueWPF.Client.Tree.Item"
+                    xmlns:treevm="clr-namespace:BookCatalogueWPF.Client.Tree.ViewModel"
+                    xmlns:viewModel="clr-namespace:BookCatalogueWPF.Client.ViewModel"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="d">
+
+    <viewModel:ViewModelLocator x:Key="Locator" d:IsDataSource="True"/>
+    <!--<DataTemplate DataType="{x:Type ca:BookVm}">
+        <bookv:BookView />
+    </DataTemplate> -->
+</ResourceDictionary>

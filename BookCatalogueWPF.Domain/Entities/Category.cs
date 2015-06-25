@@ -2,7 +2,7 @@
 
 namespace BookCatalogueWPF.Domain.Entities
 {
-    public sealed class Category
+    public class Category
     {
         public Category()
         {
