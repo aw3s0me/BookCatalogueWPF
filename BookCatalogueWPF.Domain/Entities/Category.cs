@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace BookCatalogueWPF.Domain.Entities
 {
@@ -9,7 +10,7 @@ namespace BookCatalogueWPF.Domain.Entities
             Children = new List<Category>();
         }
 
-        public string Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
 
         public ICollection<Category> Children { get; set; }

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CategoryWcfService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8280/CategoryWcfService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8280/CategoryWcfService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8280/CategoryWcfService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" />
+      <xsd:import schemaLocation="http://localhost:8280/CategoryWcfService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Message" />
+      <xsd:import schemaLocation="http://localhost:8280/CategoryWcfService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.EntityDto" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICategoryService_GetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAll" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetById" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetEntitiesForTreeByParentId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesForTreeByParentId" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetEntitiesForTreeByParentId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesForTreeByParentIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetFirstLevelTreeElements_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstLevelTreeElements" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetFirstLevelTreeElements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstLevelTreeElementsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICategoryService">
+    <wsdl:operation name="GetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrudServiceOf_CategoryDto/GetAll" message="tns:ICategoryService_GetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrudServiceOf_CategoryDto/GetAllResponse" message="tns:ICategoryService_GetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrudServiceOf_CategoryDto/GetById" message="tns:ICategoryService_GetById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrudServiceOf_CategoryDto/GetByIdResponse" message="tns:ICategoryService_GetById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitiesForTreeByParentId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITreeServiceOf_CategoryDto/GetEntitiesForTreeByParentId" message="tns:ICategoryService_GetEntitiesForTreeByParentId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITreeServiceOf_CategoryDto/GetEntitiesForTreeByParentIdResponse" message="tns:ICategoryService_GetEntitiesForTreeByParentId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstLevelTreeElements">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITreeServiceOf_CategoryDto/GetFirstLevelTreeElements" message="tns:ICategoryService_GetFirstLevelTreeElements_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITreeServiceOf_CategoryDto/GetFirstLevelTreeElementsResponse" message="tns:ICategoryService_GetFirstLevelTreeElements_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICategoryService" type="tns:ICategoryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAll">
+      <soap:operation soapAction="http://tempuri.org/ICrudServiceOf_CategoryDto/GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <soap:operation soapAction="http://tempuri.org/ICrudServiceOf_CategoryDto/GetById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitiesForTreeByParentId">
+      <soap:operation soapAction="http://tempuri.org/ITreeServiceOf_CategoryDto/GetEntitiesForTreeByParentId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstLevelTreeElements">
+      <soap:operation soapAction="http://tempuri.org/ITreeServiceOf_CategoryDto/GetFirstLevelTreeElements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CategoryWcfService">
+    <wsdl:port name="BasicHttpBinding_ICategoryService" binding="tns:BasicHttpBinding_ICategoryService">
+      <soap:address location="http://localhost:8280/CategoryWcfService.svc/CategoryService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

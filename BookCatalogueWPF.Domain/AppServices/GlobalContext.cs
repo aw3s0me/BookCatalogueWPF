@@ -6,7 +6,9 @@ namespace BookCatalogueWPF.Domain.AppServices
     {
         private static GlobalContext _instance;
 
-        private GlobalContext() { }
+        private GlobalContext()
+        {
+        }
 
         public static GlobalContext Instance()
         {

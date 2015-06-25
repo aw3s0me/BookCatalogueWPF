@@ -4,8 +4,10 @@ using BookCatalogueWPF.Common.Dto.DtoBase;
 namespace BookCatalogueWPF.Common.ServiceContracts.BaseServiceContracts
 {
     [ServiceContract]
-    public interface IGenericService<T> : ICrudService<T>, ITreeService<T> where T : DtoEntityBase
+    public interface IGenericService<T> : ICrudService<T> where T : DtoEntityBase
     {
+        //TODO: здесь методы по работе с деревом и сущности к-ые входят в состав дерева, также возможно переопределение методов Crud
+
         //[OperationContract]
         //DtoList<T> GetAll();
 

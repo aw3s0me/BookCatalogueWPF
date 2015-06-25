@@ -25,7 +25,7 @@ namespace BookCatalogueWPF.Domain.Repository
             return repository;
         }
 
-        public TEntity GetById<TEntity>(string id) where TEntity : class
+        public TEntity GetById<TEntity>(long id) where TEntity : class
         {
             return GetRepository<TEntity>().GetById(id);
         }

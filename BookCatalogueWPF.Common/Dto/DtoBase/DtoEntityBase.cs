@@ -5,8 +5,10 @@ namespace BookCatalogueWPF.Common.Dto.DtoBase
     [DataContract]
     public class DtoEntityBase : DtoBase
     {
-        [DataMember]
-        public long Id { get; set; }
+
+        //TODO: наследование почему-то создает дубликаты полей
+        //[DataMember]
+        //public long Id { get; set; }
 
     }
 }

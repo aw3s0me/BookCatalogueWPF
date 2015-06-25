@@ -4,7 +4,8 @@ namespace BookCatalogueWPF.Common.Dto.EntityDto
 {
     public class BookDto : DtoEntityBase
     {
-        public string CategoryId { get; set; }
+        public long Id { get; set; }
+        public long CategoryId { get; set; }
         public long Year { get; set; }
         public string Publisher { get; set; }
         public string Title { get; set; }

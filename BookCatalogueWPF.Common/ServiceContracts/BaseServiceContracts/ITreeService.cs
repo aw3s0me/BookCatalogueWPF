@@ -12,7 +12,10 @@ namespace BookCatalogueWPF.Common.ServiceContracts.BaseServiceContracts
     public interface ITreeService<T> where T : DtoEntityBase
     {
         [OperationContract]
-        DtoList<T> GetEntitiesForTreeByParentId(string parentId);
+        DtoList<T> GetEntitiesForTreeByParentId(long parentId);
+
+        [OperationContract]
+        DtoList<T> GetFirstLevelTreeElements();
 
         //[OperationContract]
         //T GetEntityForTree(string id);

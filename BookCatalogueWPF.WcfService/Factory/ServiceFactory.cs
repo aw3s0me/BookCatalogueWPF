@@ -1,7 +1,9 @@
 ﻿using System;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
+using BookCatalogueWPF.DataAccessLayer.JSON;
 using BookCatalogueWPF.Domain;
+using BookCatalogueWPF.Domain.AppServices;
 
 namespace BookCatalogueWPF.WcfService.Factory
 {
@@ -18,6 +20,7 @@ namespace BookCatalogueWPF.WcfService.Factory
         private void InitializeService()
         {
             AutoMapperConfiguration.Install();
+            GlobalContext.Instance().UnitOfWorkFactory = new UnitOfWorkFactoryJson();
             _isInitialized = true;
         }
 

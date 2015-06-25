@@ -91,6 +91,10 @@
       <Project>{f2b55cf2-370f-4e73-a06e-ae42888386be}</Project>
       <Name>BookCatalogueWPF.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BookCatalogueWPF.DataAccessLayer\BookCatalogueWPF.DataAccessLayer.csproj">
+      <Project>{7d6d7923-734b-468a-80cc-aa0fa158b50d}</Project>
+      <Name>BookCatalogueWPF.DataAccessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BookCatalogueWPF.Domain\BookCatalogueWPF.Domain.csproj">
       <Project>{6F8A88C7-B8F6-466D-84F1-51B9BE06B77B}</Project>
       <Name>BookCatalogueWPF.Domain</Name>

@@ -10,7 +10,7 @@ namespace BookCatalogueWPF.Common.ServiceContracts.BaseServiceContracts
         DtoList<T> GetAll();
 
         [OperationContract]
-        T GetById(string id);
+        T GetById(long id);
 
 
     }

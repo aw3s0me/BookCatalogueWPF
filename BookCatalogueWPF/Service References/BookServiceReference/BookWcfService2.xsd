@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8280/BookWcfService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.EntityDto" />
+  <xs:import schemaLocation="http://localhost:8280/BookWcfService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Message" />
+  <xs:complexType name="DtoListOfBookDtoSwFggRHi">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DtoListOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BookDto" Namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.EntityDto" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoBase">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.EntityDto" minOccurs="0" name="Dtos" nillable="true" type="q1:ArrayOfBookDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoListOfBookDtoSwFggRHi" nillable="true" type="tns:DtoListOfBookDtoSwFggRHi" />
+  <xs:complexType name="DtoBase">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Message" minOccurs="0" name="_responseInstance" nillable="true" type="q2:Response" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DtoBase" nillable="true" type="tns:DtoBase" />
+  <xs:complexType name="DtoEntityBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoEntityBase" nillable="true" type="tns:DtoEntityBase" />
+</xs:schema>

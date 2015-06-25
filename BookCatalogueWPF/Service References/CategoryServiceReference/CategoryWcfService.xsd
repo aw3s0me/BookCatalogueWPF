@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8280/CategoryWcfService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" />
+  <xs:import schemaLocation="http://localhost:8280/CategoryWcfService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.EntityDto" />
+  <xs:element name="GetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" minOccurs="0" name="GetAllResult" nillable="true" type="q1:DtoListOfCategoryDtoSwFggRHi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.EntityDto" minOccurs="0" name="GetByIdResult" nillable="true" type="q2:CategoryDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntitiesForTreeByParentId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="parentId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntitiesForTreeByParentIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" minOccurs="0" name="GetEntitiesForTreeByParentIdResult" nillable="true" type="q3:DtoListOfCategoryDtoSwFggRHi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFirstLevelTreeElements">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFirstLevelTreeElementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" minOccurs="0" name="GetFirstLevelTreeElementsResult" nillable="true" type="q4:DtoListOfCategoryDtoSwFggRHi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.EntityDto" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.EntityDto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8280/BookWcfService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" />
+  <xs:complexType name="ArrayOfBookDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BookDto" nillable="true" type="tns:BookDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBookDto" nillable="true" type="tns:ArrayOfBookDto" />
+  <xs:complexType name="BookDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" base="q1:DtoEntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Annotation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Author" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CategoryId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Publisher" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Year" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BookDto" nillable="true" type="tns:BookDto" />
+</xs:schema>

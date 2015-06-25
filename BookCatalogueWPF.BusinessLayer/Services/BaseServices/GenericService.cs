@@ -8,11 +8,5 @@ namespace BookCatalogueWPF.BusinessLayer.Services.BaseServices
         where TDtoEntity : DtoEntityBase
     {
 
-
-
-        public DtoList<TDtoEntity> GetEntitiesForTreeByParentId(string parentId)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

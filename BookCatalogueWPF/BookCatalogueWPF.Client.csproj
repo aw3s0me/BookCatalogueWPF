@@ -34,6 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="GalaSoft.MvvmLight">
       <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>
@@ -48,6 +54,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -68,16 +76,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Service References\BookServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CategoryServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Tree\Helpers\CollectionBaseVm.cs" />
     <Compile Include="Tree\Item\CategoryVm.cs" />
     <Compile Include="Tree\ViewModel\TreeVm.cs" />
     <Compile Include="Tree\View\TreeView.xaml.cs">
       <DependentUpon>TreeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AutoMapperConfiguration.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Compile Include="Wcf\BaseWcf\WcfAdapterBaseWithCrud.cs" />
-    <Compile Include="Wcf\BaseWcf\WcfAdapterBaseWithGeneric.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -123,6 +140,50 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Service References\BookServiceReference\BookCatalogueWPF.Client.BookServiceReference.BookDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BookServiceReference\BookCatalogueWPF.Client.BookServiceReference.DtoListOfBookDtoSwFggRHi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BookServiceReference\BookWcfService.wsdl" />
+    <None Include="Service References\BookServiceReference\BookWcfService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BookServiceReference\BookWcfService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BookServiceReference\BookWcfService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BookServiceReference\BookWcfService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BookServiceReference\BookWcfService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryServiceReference\BookCatalogueWPF.Client.CategoryServiceReference.CategoryDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CategoryServiceReference\BookCatalogueWPF.Client.CategoryServiceReference.DtoListOfCategoryDtoSwFggRHi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CategoryServiceReference\CategoryWcfService.wsdl" />
+    <None Include="Service References\CategoryServiceReference\CategoryWcfService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryServiceReference\CategoryWcfService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryServiceReference\CategoryWcfService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryServiceReference\CategoryWcfService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryServiceReference\CategoryWcfService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -135,12 +196,46 @@
     <Folder Include="ItemDetails\BookItem\View\" />
     <Folder Include="Search\ViewModel\" />
     <Folder Include="Search\View\" />
-    <Folder Include="Wcf\PartialWcf\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BookServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CategoryServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CategoryServiceReference\CategoryWcfService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CategoryServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CategoryServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CategoryServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookServiceReference\BookWcfService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BookServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

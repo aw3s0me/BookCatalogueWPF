@@ -7,8 +7,8 @@
     /// </summary>
     public class Book
     {
-        public string Id { get; set; }
-        public string CategoryId { get; set; }
+        public long Id { get; set; }
+        public long CategoryId { get; set; }
         public long Year { get; set; }
         public string Publisher { get; set; }
         public string Title { get; set; }

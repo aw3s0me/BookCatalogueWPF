@@ -5,7 +5,7 @@ using BookCatalogueWPF.Common.ServiceContracts.BaseServiceContracts;
 namespace BookCatalogueWPF.Common.ServiceContracts.PartialServiceContracts
 {
     [ServiceContract]
-    public interface ICategoryService : IGenericService<CategoryDto>
+    public interface ICategoryService : IGenericService<CategoryDto>, ITreeService<CategoryDto>
     {
 
     }

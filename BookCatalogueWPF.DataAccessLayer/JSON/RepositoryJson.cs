@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Linq.Expressions;
 using BookCatalogueWPF.Domain.Repository;
 using Newtonsoft.Json;
@@ -35,7 +36,7 @@ namespace BookCatalogueWPF.DataAccessLayer.JSON
             }
         }
 
-        public TEntity GetById(string id)
+        public TEntity GetById(long id)
         {
             throw new NotImplementedException();
         }
