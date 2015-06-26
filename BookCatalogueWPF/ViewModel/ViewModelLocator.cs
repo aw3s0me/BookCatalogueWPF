@@ -12,6 +12,8 @@
   See http://www.galasoft.ch/mvvm
 */
 
+using BookCatalogueWPF.Client.Grid.ViewModel;
+using BookCatalogueWPF.Client.ItemDetails.Base.ViewModel;
 using BookCatalogueWPF.Client.Tree.ViewModel;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
@@ -47,12 +49,10 @@ namespace BookCatalogueWPF.Client.ViewModel
 
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<TreeVm>();
-            
+            SimpleIoc.Default.Register<BookGridVm>();
+            SimpleIoc.Default.Register<ItemDetailsBaseVm>();
 
             //TODO: добавить Search
-
-
-       
         }
 
         public MainViewModel Main
@@ -66,6 +66,16 @@ namespace BookCatalogueWPF.Client.ViewModel
         public static TreeVm Tree
         {
             get { return ServiceLocator.Current.GetInstance<TreeVm>(); }
+        }
+
+        public static BookGridVm BookGrid
+        {
+            get { return ServiceLocator.Current.GetInstance<BookGridVm>(); }
+        }
+
+        public static ItemDetailsBaseVm ItemDetails
+        {
+            get { return ServiceLocator.Current.GetInstance<ItemDetailsBaseVm>(); }
         }
         
         public static void Cleanup()

@@ -96,22 +96,6 @@ namespace BookCatalogueWPF.Client.BookServiceReference {
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BookCatalogueWPF.Client.BookServiceReference.BookDto))]
     public partial class DtoEntityBase : BookCatalogueWPF.Client.BookServiceReference.DtoBase {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long IdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -127,7 +111,10 @@ namespace BookCatalogueWPF.Client.BookServiceReference {
         private string AuthorField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CategoryIdField;
+        private long CategoryIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PublisherField;
@@ -165,14 +152,27 @@ namespace BookCatalogueWPF.Client.BookServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CategoryId {
+        public long CategoryId {
             get {
                 return this.CategoryIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.CategoryIdField, value) != true)) {
+                if ((this.CategoryIdField.Equals(value) != true)) {
                     this.CategoryIdField = value;
                     this.RaisePropertyChanged("CategoryId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -250,17 +250,11 @@ namespace BookCatalogueWPF.Client.BookServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICrudServiceOf_BookDto/GetAll", ReplyAction="http://tempuri.org/ICrudServiceOf_BookDto/GetAllResponse")]
         System.Threading.Tasks.Task<BookCatalogueWPF.Client.BookServiceReference.DtoListOfBookDtoSwFggRHi> GetAllAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICrudServiceOf_BookDto/GetById", ReplyAction="http://tempuri.org/ICrudServiceOf_BookDto/GetByIdResponse")]
-        BookCatalogueWPF.Client.BookServiceReference.BookDto GetById(string id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookService/GetBooksByCategoryId", ReplyAction="http://tempuri.org/IBookService/GetBooksByCategoryIdResponse")]
+        BookCatalogueWPF.Client.BookServiceReference.DtoListOfBookDtoSwFggRHi GetBooksByCategoryId(long categoryId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICrudServiceOf_BookDto/GetById", ReplyAction="http://tempuri.org/ICrudServiceOf_BookDto/GetByIdResponse")]
-        System.Threading.Tasks.Task<BookCatalogueWPF.Client.BookServiceReference.BookDto> GetByIdAsync(string id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITreeServiceOf_BookDto/GetEntitiesForTreeByParentId", ReplyAction="http://tempuri.org/ITreeServiceOf_BookDto/GetEntitiesForTreeByParentIdResponse")]
-        BookCatalogueWPF.Client.BookServiceReference.DtoListOfBookDtoSwFggRHi GetEntitiesForTreeByParentId(string parentId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITreeServiceOf_BookDto/GetEntitiesForTreeByParentId", ReplyAction="http://tempuri.org/ITreeServiceOf_BookDto/GetEntitiesForTreeByParentIdResponse")]
-        System.Threading.Tasks.Task<BookCatalogueWPF.Client.BookServiceReference.DtoListOfBookDtoSwFggRHi> GetEntitiesForTreeByParentIdAsync(string parentId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookService/GetBooksByCategoryId", ReplyAction="http://tempuri.org/IBookService/GetBooksByCategoryIdResponse")]
+        System.Threading.Tasks.Task<BookCatalogueWPF.Client.BookServiceReference.DtoListOfBookDtoSwFggRHi> GetBooksByCategoryIdAsync(long categoryId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -298,20 +292,12 @@ namespace BookCatalogueWPF.Client.BookServiceReference {
             return base.Channel.GetAllAsync();
         }
         
-        public BookCatalogueWPF.Client.BookServiceReference.BookDto GetById(string id) {
-            return base.Channel.GetById(id);
+        public BookCatalogueWPF.Client.BookServiceReference.DtoListOfBookDtoSwFggRHi GetBooksByCategoryId(long categoryId) {
+            return base.Channel.GetBooksByCategoryId(categoryId);
         }
         
-        public System.Threading.Tasks.Task<BookCatalogueWPF.Client.BookServiceReference.BookDto> GetByIdAsync(string id) {
-            return base.Channel.GetByIdAsync(id);
-        }
-        
-        public BookCatalogueWPF.Client.BookServiceReference.DtoListOfBookDtoSwFggRHi GetEntitiesForTreeByParentId(string parentId) {
-            return base.Channel.GetEntitiesForTreeByParentId(parentId);
-        }
-        
-        public System.Threading.Tasks.Task<BookCatalogueWPF.Client.BookServiceReference.DtoListOfBookDtoSwFggRHi> GetEntitiesForTreeByParentIdAsync(string parentId) {
-            return base.Channel.GetEntitiesForTreeByParentIdAsync(parentId);
+        public System.Threading.Tasks.Task<BookCatalogueWPF.Client.BookServiceReference.DtoListOfBookDtoSwFggRHi> GetBooksByCategoryIdAsync(long categoryId) {
+            return base.Channel.GetBooksByCategoryIdAsync(categoryId);
         }
     }
 }

@@ -36,10 +36,10 @@ namespace BookCatalogueWPF.DataAccessLayer.JSON
             }
         }
 
-        public TEntity GetById(long id)
-        {
-            throw new NotImplementedException();
-        }
+        //public TEntity GetById(Predicate<TEntity> predicate)
+        //{
+        //    return _items.Find(predicate);
+        //}
 
         public IList<TEntity> GetAll()
         {

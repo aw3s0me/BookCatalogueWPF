@@ -1,5 +1,6 @@
 ﻿using System.Runtime.Serialization;
 using BookCatalogueWPF.Common.Dto.DtoBase;
+using System.Collections.Generic;
 
 namespace BookCatalogueWPF.Common.Dto.EntityDto
 {
@@ -14,5 +15,7 @@ namespace BookCatalogueWPF.Common.Dto.EntityDto
         public bool HasChildren { get; set; }
 
         public long? ParentId { get; set; }
+
+        public IList<CategoryDto> Children { get; set; }
     }
 }

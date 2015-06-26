@@ -11,6 +11,7 @@
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" base="q1:DtoEntityBase">
         <xs:sequence>
+          <xs:element minOccurs="0" name="Children" nillable="true" type="tns:ArrayOfCategoryDto" />
           <xs:element minOccurs="0" name="HasChildren" type="xs:boolean" />
           <xs:element minOccurs="0" name="Id" type="xs:long" />
           <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />

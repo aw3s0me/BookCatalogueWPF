@@ -2,6 +2,7 @@
 using AutoMapper;
 using BookCatalogueWPF.Client.BookServiceReference;
 using BookCatalogueWPF.Client.CategoryServiceReference;
+using BookCatalogueWPF.Client.ItemDetails.BookItem.ViewModel;
 using BookCatalogueWPF.Client.Tree.Item;
 
 namespace BookCatalogueWPF.Client.ViewModel
@@ -12,11 +13,11 @@ namespace BookCatalogueWPF.Client.ViewModel
         {
             #region Book
 
-            //Mapper.CreateMap<BookVm, BookDto>()
-            //    .ForMember(dest => dest.Id, otps => otps.MapFrom(src => src.Id));
+            Mapper.CreateMap<BookVm, BookDto>()
+                .ReverseMap();
 
-            //Mapper.CreateMap<BookDto, BookVm>()
-            //    .ForMember(dest => dest.Id, otps => otps.MapFrom(src => src.Id));
+            Mapper.CreateMap<BookDto, BookVm>()
+                .ReverseMap();
 
             #endregion
 

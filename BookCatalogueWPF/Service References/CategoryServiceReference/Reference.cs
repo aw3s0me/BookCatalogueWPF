@@ -105,6 +105,9 @@ namespace BookCatalogueWPF.Client.CategoryServiceReference {
     public partial class CategoryDto : BookCatalogueWPF.Client.CategoryServiceReference.DtoEntityBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private BookCatalogueWPF.Client.CategoryServiceReference.CategoryDto[] ChildrenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool HasChildrenField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -115,6 +118,19 @@ namespace BookCatalogueWPF.Client.CategoryServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<long> ParentIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public BookCatalogueWPF.Client.CategoryServiceReference.CategoryDto[] Children {
+            get {
+                return this.ChildrenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChildrenField, value) != true)) {
+                    this.ChildrenField = value;
+                    this.RaisePropertyChanged("Children");
+                }
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool HasChildren {

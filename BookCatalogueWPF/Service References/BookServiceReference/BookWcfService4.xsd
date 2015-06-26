@@ -13,7 +13,8 @@
         <xs:sequence>
           <xs:element minOccurs="0" name="Annotation" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Author" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CategoryId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CategoryId" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
           <xs:element minOccurs="0" name="Publisher" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Year" type="xs:long" />

@@ -5,10 +5,23 @@
                     xmlns:viewModel="clr-namespace:BookCatalogueWPF.Client.ViewModel"
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:ca="clr-namespace:BookCatalogueWPF.Client.ItemDetails.BookItem.ViewModel"
+                    xmlns:view="clr-namespace:BookCatalogueWPF.Client.ItemDetails.BookItem.View"
+                    xmlns:viewModel1="clr-namespace:BookCatalogueWPF.Client.ItemDetails.Base.ViewModel"
+                    xmlns:view1="clr-namespace:BookCatalogueWPF.Client.ItemDetails.Base.View"
+                    xmlns:viewModel2="clr-namespace:BookCatalogueWPF.Client.Search.ViewModel"
+                    xmlns:view2="clr-namespace:BookCatalogueWPF.Client.Search.View"
+
                     mc:Ignorable="d">
 
     <viewModel:ViewModelLocator x:Key="Locator" d:IsDataSource="True"/>
-    <!--<DataTemplate DataType="{x:Type ca:BookVm}">
-        <bookv:BookView />
-    </DataTemplate> -->
+    
+    <DataTemplate DataType="{x:Type ca:BookVm}">
+        <view:BookDetailsView />
+    </DataTemplate> 
+    
+    <DataTemplate DataType="{x:Type viewModel2:SearchVm}">
+        <view2:SearchView />
+    </DataTemplate>
+    
 </ResourceDictionary>

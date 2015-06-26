@@ -5,21 +5,42 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:viewModel="clr-namespace:BookCatalogueWPF.Client.Tree.ViewModel"
              xmlns:item="clr-namespace:BookCatalogueWPF.Client.Tree.Item"
+             xmlns:mvvm="http://www.galasoft.ch/mvvmlight"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
              DataContext="{Binding Tree, Source={StaticResource Locator}}"
-             d:DesignHeight="300" d:DesignWidth="300">
+             >
     <Grid>
-        <TreeView ItemsSource="{Binding Path=TreeRootCollection}" >
+        <TreeView x:Name="TreeViewN" ItemsSource="{Binding Path=TreeRootCollection}" >
+           <!-- <TreeViewItem Header="North America">
+                <TreeViewItem Header="USA"></TreeViewItem>
+                <TreeViewItem Header="Canada"></TreeViewItem>
+                <TreeViewItem Header="Mexico"></TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="South America">
+                <TreeViewItem Header="Argentina"></TreeViewItem>
+                <TreeViewItem Header="Brazil"></TreeViewItem>
+                <TreeViewItem Header="Uruguay"></TreeViewItem>
+            </TreeViewItem> -->
             <TreeView.ItemContainerStyle>
                 <Style TargetType="{x:Type TreeViewItem}">
                     <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
                 </Style>
             </TreeView.ItemContainerStyle>
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate ItemsSource="{Binding Path=Children}">
                     <TextBlock Text="{Binding Path=Name}" />
+                    
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectedItemChanged">
+                    <mvvm:EventToCommand Command="{Binding SelectElementCommand, Mode=OneWay}" 
+                                         CommandParameter="{Binding SelectedItem, ElementName=TreeViewN, Mode=OneWay}"
+                                         ></mvvm:EventToCommand>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
         </TreeView>
     </Grid>
 </UserControl>

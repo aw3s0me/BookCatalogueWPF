@@ -15,23 +15,25 @@ namespace BookCatalogueWPF.Client.Tree.Item
 
         public CategoryVm()
         {
-            Parent = null;
             Init();
+            Parent = null;
+            
         }
 
         public CategoryVm(CategoryVm parent)
         {
-            Parent = parent;
             Init();
+            Parent = parent;
+            
         }
 
         public CategoryVm(CategoryDto dto)
         {
+            Init();
             if (dto != null)
             {
                 Mapper.Map(dto, this);
             }
-            Init();
         }
 
         private void Init()
@@ -62,7 +64,7 @@ namespace BookCatalogueWPF.Client.Tree.Item
         public void LoadChildren()
         {
             //var children = CategoryService.GetEntitiesForTree();
-            //Обработка dto
+            //Обработка dto Lazy Load
 
             throw new NotImplementedException();
         }
@@ -77,6 +79,18 @@ namespace BookCatalogueWPF.Client.Tree.Item
         {
             get { return _isExpanded; }
             set { Set(() => IsExpanded, ref _isExpanded, value); }
+        }
+
+        #endregion
+
+        #region IsSelected
+
+        private bool _isSelected;
+
+        public bool IsSelected
+        {
+            get { return _isSelected; }
+            set { Set(() => IsSelected, ref _isSelected, value); }
         }
 
         #endregion

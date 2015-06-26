@@ -4,19 +4,16 @@
         Title="Каталог книг" Height="650" Width="1125"
         DataContext="{Binding Main, Source={StaticResource Locator}}"
         xmlns:tree="clr-namespace:BookCatalogueWPF.Client.Tree.View"
-        >
+        xmlns:view="clr-namespace:BookCatalogueWPF.Client.Grid.View">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <tree:TreeView Grid.Row="0" Grid.Column="0" />
-        <DockPanel Grid.Row="0" Grid.Column="1" Background="Aqua">
-            
-            
-        </DockPanel>
+        <tree:TreeView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+        <view:BookGridView Grid.Row="0" Grid.Column="1" />
     </Grid>
 </Window>

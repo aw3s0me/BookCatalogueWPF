@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:8280/BookWcfService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" />
-  <xs:import schemaLocation="http://localhost:8280/BookWcfService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.EntityDto" />
   <xs:element name="GetAll">
     <xs:complexType>
       <xs:sequence />
@@ -14,31 +13,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetById">
+  <xs:element name="GetBooksByCategoryId">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="categoryId" type="xs:long" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetByIdResponse">
+  <xs:element name="GetBooksByCategoryIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.EntityDto" minOccurs="0" name="GetByIdResult" nillable="true" type="q2:BookDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetEntitiesForTreeByParentId">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="parentId" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetEntitiesForTreeByParentIdResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" minOccurs="0" name="GetEntitiesForTreeByParentIdResult" nillable="true" type="q3:DtoListOfBookDtoSwFggRHi" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BookCatalogueWPF.Common.Dto.DtoBase" minOccurs="0" name="GetBooksByCategoryIdResult" nillable="true" type="q2:DtoListOfBookDtoSwFggRHi" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

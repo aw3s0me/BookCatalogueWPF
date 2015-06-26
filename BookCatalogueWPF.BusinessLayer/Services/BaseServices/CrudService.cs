@@ -16,15 +16,15 @@ namespace BookCatalogueWPF.BusinessLayer.Services.BaseServices
             return ExecuteCommand(GetAllCommand);
         }
 
-        public TDtoEntity GetById(long id)
-        {
-            return ExecuteCommand(locator => GetByIdCommand(locator, id));
-        }
+        //public TDtoEntity GetById(long id)
+        //{
+        //    return ExecuteCommand(locator => GetByIdCommand(locator, id));
+        //}
 
-        protected virtual TDtoEntity GetByIdCommand(IRepositoryLocator locator, long id)
-        {
-            throw new System.NotImplementedException();
-        }
+        //protected virtual TDtoEntity GetByIdCommand(IRepositoryLocator locator, long id)
+        //{
+        //    var element = locator.GetById<TEntity>(x => x.);
+        //}
 
         protected virtual DtoList<TDtoEntity> GetAllCommand(IRepositoryLocator locator)
         {

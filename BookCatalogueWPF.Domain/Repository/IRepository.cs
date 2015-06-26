@@ -12,7 +12,7 @@ namespace BookCatalogueWPF.Domain.Repository
 
         #region Retrieval operations
 
-        TEntity GetById(long id);
+        //TEntity GetById(Predicate<TEntity> predicate);
 
         IList<TEntity> GetAll();
 
