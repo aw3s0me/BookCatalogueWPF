@@ -1,0 +1,12 @@
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\bin\Debug\BookCatalogueWPF.Domain.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\bin\Debug\BookCatalogueWPF.Domain.pdb
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\bin\Debug\BookCatalogueWPF.Common.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\bin\Debug\BookCatalogueWPF.Common.pdb
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\obj\Debug\BookCatalogueWPF.Domain.csprojResolveAssemblyReference.cache
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\obj\Debug\BookCatalogueWPF.Domain.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\obj\Debug\BookCatalogueWPF.Domain.pdb
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\bin\Debug\AutoMapper.Net4.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\bin\Debug\AutoMapper.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\bin\Debug\AutoMapper.pdb
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\bin\Debug\AutoMapper.xml
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Domain\bin\Debug\AutoMapper.Net4.pdb

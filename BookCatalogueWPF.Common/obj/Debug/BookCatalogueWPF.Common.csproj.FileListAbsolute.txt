@@ -1,0 +1,5 @@
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Common\bin\Debug\BookCatalogueWPF.Common.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Common\bin\Debug\BookCatalogueWPF.Common.pdb
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Common\obj\Debug\BookCatalogueWPF.Common.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Common\obj\Debug\BookCatalogueWPF.Common.pdb
+C:\work\BookCatalogueWPF\BookCatalogueWPF.Common\obj\Debug\BookCatalogueWPF.Common.csprojResolveAssemblyReference.cache

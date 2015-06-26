@@ -1,0 +1,14 @@
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\bin\Debug\AutoMapper.Net4.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\bin\Debug\BookCatalogueWPF.BusinessLayer.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\bin\Debug\BookCatalogueWPF.BusinessLayer.pdb
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\bin\Debug\AutoMapper.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\bin\Debug\BookCatalogueWPF.Common.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\bin\Debug\BookCatalogueWPF.Domain.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\bin\Debug\BookCatalogueWPF.Common.pdb
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\bin\Debug\BookCatalogueWPF.Domain.pdb
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\bin\Debug\AutoMapper.pdb
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\bin\Debug\AutoMapper.xml
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\bin\Debug\AutoMapper.Net4.pdb
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\obj\Debug\BookCatalogueWPF.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\obj\Debug\BookCatalogueWPF.BusinessLayer.dll
+C:\work\BookCatalogueWPF\BookCatalogueWPF.BusinessLayer\obj\Debug\BookCatalogueWPF.BusinessLayer.pdb

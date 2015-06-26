@@ -1,0 +1,2 @@
+C:\work\BookCatalogueWPF\BookCatalogueWPF\bin\Debug\BookCatalogueWPF.exe.config
+C:\work\BookCatalogueWPF\BookCatalogueWPF\bin\Debug\BookCatalogueWPF.Client.exe.config
